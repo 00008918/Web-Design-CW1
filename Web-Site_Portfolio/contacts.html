@@ -30,26 +30,40 @@
 
     <main>
         <div class="main-image">
-            <h1>Contact information</h1>
+            <h1>Contacts</h1>
             <div class="button">Hire me</div>
         </div>
-        <section class="map">
-            <div class="map-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6611.498931599785!2d-118.27228668542162!3d34.0502971843764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1603628828906!5m2!1sru!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </section>
         <section class="contacts">
-            <div class="phone-numbers">
-                <h2>Contact me and my Team</h2>
-                <ul class="phone-numbers-list">
-                    <li class="phone-numbers-item">John Wall - +7 344 02 02</li>
-                    <li class="phone-numbers-item">PR manager - +7 422 77 88</li>
-                    <li class="phone-numbers-item">Web Design specialist - +7 842 14 20</li>
-                    <li class="phone-numbers-item">Accountant</li>
-                </ul>
+            <div class="contacts-wrapper">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1386.8645794395693!2d-118.55109129494724!3d34.23480162283857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2s!4v1603898562922!5m2!1sru!2s"></iframe>
+                </div>
+                <div class="form">
+                    <h2>Write a message</h2>
+                    <form action="contacts.html">
+                        <input class="Client-name" type="text" placeholder="Full name">
+                        <input class="Client-email" type="email" placeholder="Email">
+                        <textarea class="Message" placeholder="Message"></textarea>
+                        <input class="submit-btn" type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
-            <div class="form">
 
+            <div class="contacts-wrapper2">
+                <div class="phone-numbers">
+                    <h2>Call me</h2>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+                <div class="contacts-video">
+                    <video style="width: 100px; height: 100px;">
+                        <source src="https://www.youtube.com/watch?v=p9Ubg6Mqq6w">
+                    </video>
+                </div>
             </div>
         </section>
     </main>
@@ -71,5 +85,6 @@
             </ul>
         </div>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
