@@ -526,7 +526,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 
 .contacts .contacts-wrapper2{
     width: 80%;
-    height: 70vh;
+    height: auto;
     background-color: rgb(216, 78, 27);
     border-radius: 20px;
     display: flex;
@@ -537,15 +537,55 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 }
 
 .contacts .contacts-wrapper2 .phone-numbers{
-    width: 50%;
-    height: 100%;
+    width: 40%;
+    height: auto;
     background-color: #fff;
 }
 .contacts .contacts-wrapper2 .contacts-video{
     width: 50%;
-    height: 100%;
-    background-color: blue;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.contacts .contacts-wrapper2 .phone-numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    border-radius: 20px;
+}
+.contacts .contacts-wrapper2 .phone-numbers .phone-numbers-heading{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: rgb(0, 151, 238);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.contacts .contacts-wrapper2 .phone-numbers .team-names{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(2, 128, 201);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+.contacts .contacts-wrapper2 .phone-numbers .team-names:nth-child(4){
+    border-bottom-left-radius: 20px;
+}
+.contacts .contacts-wrapper2 .phone-numbers .team-names:nth-child(5){
+    border-bottom-right-radius: 20px;
+}
+.contacts .contacts-wrapper2 .phone-numbers .team-names h3{
+    font-size: 1rem;
+    text-align: center;
+}
+
 
 
 
@@ -637,6 +677,18 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         margin-top: 20px;
     }
 
+    .contacts .contacts-wrapper2{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .contacts .contacts-wrapper2 .phone-numbers{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .contacts .contacts-wrapper2 .contacts-video{
+        width: 90%;
+    }
 }
 @media screen and (max-width:768px){
     .intro{
