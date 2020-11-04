@@ -588,6 +588,61 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 
 
 
+/*CV page*/
+.cv-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv-section .cv-wrapper{
+    width: 80%;
+    height: 80%;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.7);
+}
+
+.cv-section .cv-wrapper .cv-img{
+    width: 30%;
+    height: auto;
+}
+
+.cv-section .cv-wrapper .cv-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.cv-section .cv-wrapper .cv-box{
+    width: 50%;
+    height: 80%;
+    background-color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    background-color: crimson;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.download a{
+    text-decoration: none;
+    color: #fff;
+}
 
 
 
