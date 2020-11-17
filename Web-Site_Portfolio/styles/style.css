@@ -281,7 +281,26 @@ header .main-nav .nav-list .nav-item a:hover{
 
 .footer .socials-links a i{
     font-size: 2.5rem;
-    color: #fff;   
+    color: #fff;  
+    transition: 0.3s ease-in; 
+    line-height: 87%; 
+}
+.footer .socials-links a:first-child:hover i{
+    color:#0088cc;
+    background-color: #fff;
+    border-radius: 100px;
+    transform: scale(1.05);
+}
+.footer .socials-links a:nth-child(2):hover i{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+.footer .socials-links a:nth-child(3):hover i{
+    border-radius: 100px;
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
 }
 
 .footer .footer-map{
@@ -305,6 +324,10 @@ header .main-nav .nav-list .nav-item a:hover{
     text-decoration: none;
     font-size: 1rem;
     color: #fff;
+    transition: 0.3s ease-in;
+}
+.footer .footer-map .footer-map-list .footer-map-item a:hover{
+    color: rgb(179, 179, 179);
 }
 
 .footer .footer-map .copyright a{
@@ -428,12 +451,13 @@ main .portfolio-wrapper .portfolio-item-overlay{
 
 main .portfolio-wrapper .portfolio-item-overlay h3{
   opacity: 0;
-  color: rgb(224, 224, 224);
-  font-weight: 500;
+  color: rgb(241, 241, 241);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color:rgba(0,0,0,0.9);;
 }
 
 main .portfolio-wrapper .portfolio-item:hover{
@@ -607,13 +631,13 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 /*CV page*/
 .cv{
     width: 100%;
-    height: 85vh;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    margin: 50px 0;
 }
-.cv .cv-download{
+.cv .cv-download, .report{
     width: 40%;
     height: auto;
     padding: 30px;
@@ -621,19 +645,9 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-color: gray;
+    background-color: rgb(1, 94, 148);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-}
-.cv .report{
-    width: 40%;
-    height: auto;
-    padding: 30px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    background-color: gray;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
 }
 .cv img{
     width: 50%;
@@ -650,15 +664,31 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     font-family: Verdana;
     text-transform: uppercase;
 }
-.cv-report-button{
+.cv div h2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.open-btn,.download-btn{
     width: 70%;
     height: 60px;
     background-color: rgb(0, 151, 238);
     border-radius: 50px;
+    margin-bottom: 10px;
     transition: 0.3s ease-in;
 }
-.cv-report-button:hover{
+.download-btn{
+    background-color: rgb(36, 199, 4);
+}
+.open-btn:hover{
     background-color: rgb(11, 125, 192);
+}
+.download-btn:hover{
+    background-color: rgb(2, 173, 11);
 }
 
 
@@ -707,7 +737,8 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 .video-wrapper video{
    width: 100%;
    height: 100%;
-   
+   border: 5px solid rgb(34, 34, 34);
+   border-bottom: 10px solid rgb(34, 34, 34);
 }
 .video-wrapper video[poster]{
     object-fit: cover;
@@ -741,8 +772,42 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 }
 
 
-
-
+/*Gallery*/
+.gallery{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.gallery-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 3em;
+}
+.gallery-item{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to right, #232526, #414345);
+}
+.gallery-item .img-desc{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgba(217,241,255,1);
+}
+.gallery-item img{
+    width: 100%;
+    border-bottom: 3px solid rgba(217,241,255,1);
+}
 
 
 
@@ -864,6 +929,21 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     }
     .about-video .education{
         font-size: 0.9rem;
+    }
+
+    /*CV page*/
+    .cv{
+        flex-direction: column;
+        width: 100%;
+    }
+    .cv .cv-download, .report{
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    /*Gallery page*/
+    .gallery-container{
+        grid-template-columns: repeat(3, 1fr);
     }
     
 }
@@ -1003,6 +1083,24 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     .about-video .education{
         font-size: 0.8rem;
     }
+
+    /*CV page*/
+    .cv{
+        flex-direction: column;
+        width: 100%;
+    }
+    .cv>div a{
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    .cv>div h2{
+        font-size: 1.5rem;
+    }
+
+    /*Gallery page*/
+    .gallery-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -1055,6 +1153,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         height: auto;
         padding: 50px 0;
         flex-direction: column;
+        
     }
     .about-video .video-wrapper{
         width: 70%;
@@ -1070,7 +1169,10 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         font-size: 0.6rem;
     }
 
-   
+   /*Gallery page*/
+   .gallery-container{
+    grid-template-columns: 1fr;
+}
 }
 
 @keyframes change_background{
