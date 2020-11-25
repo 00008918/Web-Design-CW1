@@ -2,10 +2,16 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --mainColor : #17252a;
+    --secColor  : rgb(74, 165, 218);
+    --mainFont  :'Poppins', sans-serif;
 }
 
 body{
+    font-family: var(--mainFont);
     background: linear-gradient(90deg, rgba(217,241,255,1) 0%, rgba(74,165,218,1) 50%, rgba(12,104,193,1) 100%);
 }
 
@@ -14,16 +20,15 @@ header{
     display: flex;
     width: 100%;
     height: 15vh;
-    background-color: rgb(56, 56, 56);
+    background-color: var(--mainColor);
     justify-content: space-around;
     align-items: center;
     z-index: 999;
-    border-bottom: 2px solid rgb(150, 150, 150);
+    border-bottom: 2px solid  var(--secColor);
 }
 
 header .logo{
    height: 14vh;
-
 }
 
 header .logo img{
@@ -43,10 +48,6 @@ header .main-nav{
     align-items: center;
 }
 
-header.sticky{
-    background-color: crimson;
-}
-
 header .main-nav .nav-list{
     display: flex;
     width: 100%;
@@ -56,17 +57,16 @@ header .main-nav .nav-list{
     align-items: center;
 }
 
-
 header .main-nav .nav-list .nav-item a{
     text-decoration: none;
-    color: rgb(224, 224, 224);
+    color: #feffff;
     transition: all 0.3s ease-in;
     font-size: 1.1rem;
     font-weight: bold;
 }
 
 header .main-nav .nav-list .nav-item a:hover{
-    color:  rgb(74, 165, 218);
+    color: var(--secColor);
     
 }
 
@@ -77,7 +77,7 @@ header .main-nav .nav-list .nav-item a:hover{
 .burger div{
    width: 30px;
    height: 3px;
-   background-color: rgb(224, 224, 224);
+   background-color: #feffff;
    margin: 5px;
    transition: 0.5s;
 }
@@ -270,8 +270,8 @@ header .main-nav .nav-list .nav-item a:hover{
     align-items: center;
     width: 100%;
     height: 20vh;
-    background-color: rgb(36, 36, 36);
-    border-top: 2px solid rgb(150, 150, 150);
+    background-color: var(--mainColor);
+    border-top: 2px solid var(--secColor);
 }
 
 .footer .socials-links{
@@ -285,7 +285,7 @@ header .main-nav .nav-list .nav-item a:hover{
 
 .footer .socials-links a i{
     font-size: 2.5rem;
-    color: #fff;  
+    color: #feffff;  
     transition: 0.3s ease-in; 
     line-height: 87%; 
 }
@@ -346,7 +346,7 @@ footer .copyright{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(228, 13, 56);
+    background-color: var(--secColor);
 }
 footer .copyright p{
     font-size: 0.7rem;
@@ -506,7 +506,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     height: 100px;
     padding: 5px;
     border-radius: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: var(--mainColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -534,7 +534,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  rgb(74, 165, 218);
+    background-color: var(--mainColor);
     transform: translateY(100%);
     opacity: 1;
     transition: 1s;
@@ -549,7 +549,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     opacity: 1;
 }
 .contact-info .card:hover .icon{
-    background:  rgb(74, 165, 218);
+    background:  var(--mainColor);
 }
 .contact-info .card:hover .icon i{
     color: #fff;
@@ -583,7 +583,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 .form{
     width: 40%;
     height: 70%;
-    background-color:  rgb(155, 155, 155);
+    background-color:  #feffff;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -594,39 +594,59 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    
     flex-direction: column;
+}
+.form form>*{
+    margin-bottom: 10px;
+    font-family: var(--mainFont);
 }
 .form form h2{
     text-align: center;
     margin-bottom: 20px;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--mainColor);
 }
 .form form input{
     height: 50px;
     text-align: center;
     line-height: 50px;
     font-weight: bold;
+    border-radius: 20px;
 }
 .form form textarea{
     height: 60px;
     font-weight: bold;
     line-height: 60px;
     text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
 }
 .form form .submit-btn{
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s ease-in;
+    background-color: var(--mainColor);
+    color: #feffff;
 }
 .form form .submit-btn:hover{
-    background-color: crimson;
+    background-color: var(--secColor);
     color: #fff;
 }
 
-
+.form form .success{
+    border: 3px solid rgb(19, 212, 1);
+    background-color: rgb(184, 255, 162);
+}
+.form form .success::placeholder{
+    color: rgb(19, 212, 1);
+}
+.form form .error{
+    border: 3px solid #da0000;
+    background-color: rgb(255, 183, 183);
+}
+.form form .error::placeholder{
+    color: #da0000;
+}
 
 
 
@@ -649,23 +669,24 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(1, 94, 148);
+    background-color: #feffff;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
     border-radius: 20px;
 }
 .cv img{
     width: 50%;
     margin-bottom: 20px;
+    border: 5px solid var(--mainColor);
+    border-radius: 20px;
 }
 .cv div a{
     text-decoration: none;
-    color: #000;
+    color: #feffff;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    font-family: Verdana;
     text-transform: uppercase;
 }
 .cv div h2{
@@ -674,25 +695,25 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--mainColor);
     margin-bottom: 20px;
 }
 .open-btn,.download-btn{
     width: 70%;
     height: 60px;
-    background-color: rgb(0, 151, 238);
+    background-color: var(--mainColor);
     border-radius: 50px;
     margin-bottom: 10px;
     transition: 0.3s ease-in;
 }
 .download-btn{
-    background-color: rgb(36, 199, 4);
+    background-color: var(--mainColor);
 }
 .open-btn:hover{
-    background-color: rgb(11, 125, 192);
+    background-color: var(--secColor);
 }
 .download-btn:hover{
-    background-color: rgb(2, 173, 11);
+    background-color: var(--secColor);
 }
 
 
@@ -709,21 +730,23 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 .about-paragraph{
     width: 60%;
     height: auto;
-    background-color: rgb(245, 245, 245);
+    background-color: #feffff;
     padding: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .about-paragraph h2{
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    color: var(--mainColor);
 }
 .about-paragraph p{
     width: 100%;
-    color: rgb(36, 36, 36);
+    color: var(--mainColor);
     text-align: justify;
 }
 
@@ -737,12 +760,13 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 .video-wrapper{
     width: 40%;
     height: 70%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 .video-wrapper video{
    width: 100%;
    height: 100%;
-   border: 5px solid rgb(34, 34, 34);
-   border-bottom: 10px solid rgb(34, 34, 34);
+   border: 5px solid var(--mainColor);
+   border-bottom: 10px solid var(--mainColor);
 }
 .video-wrapper video[poster]{
     object-fit: cover;
@@ -750,28 +774,32 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 .about-video .education{
     width: 45%;
     height: auto;
-    background-color:rgb(245, 245, 245);
+    background-color:#feffff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 30px 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
 
 .about-video .education h2{
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: var(--mainColor);
 }
 .about-video .education ul li{
     line-height: 50px;
     list-style: none;
-    border-bottom: 1px solid #000;
+    color: var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
 }
 .about-video .education ul li span{
     font-weight: bold;
-    color: rgb(0, 151, 238);
+    color: var(--secColor);
 }
 .about-video .education ul li i{
+    color: var(--mainColor);
     margin-right: 10px;
 }
 
@@ -795,7 +823,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 }
 .gallery-item{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to right, #232526, #414345);
+    background: var(--mainColor);
 }
 .gallery-item .img-desc{
     width: 100%;
@@ -806,11 +834,11 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     padding: 10px;
     font-size: 0.8rem;
     font-weight: bold;
-    color: rgba(217,241,255,1);
+    color: #feffff;
 }
 .gallery-item img{
     width: 100%;
-    border-bottom: 3px solid rgba(217,241,255,1);
+    border-bottom: 3px solid #feffff;
 }
 
 
@@ -828,7 +856,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         right: 0px;
         top: 15vh;
         height: 85vh;
-        background-color: rgb(56, 56, 56);
+        background-color: var(--mainColor);
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         z-index: 2;
@@ -843,16 +871,14 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         justify-content: space-around;  
     }
     .main-nav .nav-list li{
-        border-bottom: 1px solid rgb(224, 224, 224, 0.5);
+        border-bottom: 1px solid #feffff;
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .main-nav .nav-list:first-child{
-      border-top: 1px solid rgb(224, 224, 224, 0.5);
-    }
+    
     .burger{
         display: block;
         cursor: pointer;
@@ -1129,17 +1155,26 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     }
     
     /*FOOTER*/
-    .footer .footer-map .footer-map-list{
+    .footer .footer-map{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .footer-map .footer-map-list{
+        width: 60%;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        background: rgb(56, 56, 56);
+        background:var(--secColor);
         padding: 10px;
-
+        border-radius: 10px;
     }
     .footer .footer-map .footer-map-list .footer-map-item a{
         font-size: 1rem;
+    }
+    .footer .footer-map .footer-map-list .footer-map-item a:hover{
+        color: var(--mainColor);
     }
 
 /*ABOUT page*/
