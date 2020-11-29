@@ -759,18 +759,15 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 }
 .video-wrapper{
     width: 40%;
-    height: 70%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    height: auto;
 }
-.video-wrapper video{
+.video-wrapper iframe{
    width: 100%;
-   height: 100%;
+   height: 300px;
    border: 5px solid var(--mainColor);
-   border-bottom: 10px solid var(--mainColor);
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
 }
-.video-wrapper video[poster]{
-    object-fit: cover;
-}
+
 .about-video .education{
     width: 45%;
     height: auto;
@@ -948,11 +945,12 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         flex-direction: column;
     }
     .about-video .video-wrapper{
-        width: 70%;
+        width: 60%;
         padding-bottom: 50px;
     }
+    
     .about-video .education{
-        width: 70%;
+        width: 60%;
     }
     .about-video .education h2{
         font-size: 1.2rem;
@@ -1101,11 +1099,14 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         flex-direction: column;
     }
     .about-video .video-wrapper{
-        width: 70%;
+        width: 80%;
         padding-bottom: 50px;
     }
+    .video-wrapper iframe{
+        height: auto;
+    }
     .about-video .education{
-        width: 70%;
+        width: 80%;
     }
     .about-video .education h2{
         font-size: 1rem;
