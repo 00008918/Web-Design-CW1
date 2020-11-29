@@ -1075,7 +1075,8 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     }
     .location .map{
         width: 70%;
-        height: auto;
+        height: 250px;
+        margin-bottom: 20px;
     }
     .location .form{
         width: 70%;
@@ -1178,6 +1179,11 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         color: var(--mainColor);
     }
 
+    /*CONTACTS*/
+    .location .map{
+        height: 210px;
+    }
+
 /*ABOUT page*/
     .about-paragraph{
         padding: 30px;
@@ -1196,11 +1202,11 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
         
     }
     .about-video .video-wrapper{
-        width: 70%;
+        width: 80%;
         padding-bottom: 50px;
     }
     .about-video .education{
-        width: 70%;
+        width: 80%;
     }
     .about-video .education h2{
         font-size: 0.8rem;
