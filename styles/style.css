@@ -820,7 +820,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
 }
 .gallery-item{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-    background: var(--mainColor);
+    background: #feffff;
 }
 .gallery-item .img-desc{
     width: 100%;
@@ -831,7 +831,7 @@ main .portfolio-wrapper .portfolio-item:hover .portfolio-item-overlay h3{
     padding: 10px;
     font-size: 0.8rem;
     font-weight: bold;
-    color: #feffff;
+    color: var(--mainColor);
 }
 .gallery-item img{
     width: 100%;
