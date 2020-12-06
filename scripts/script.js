@@ -31,11 +31,11 @@ const form = document.querySelector('form');
 const send = document.querySelector('#send');
 
 /*Creating eventListener, when submit button is clicked => "checkInputs" function runs */
+if(form){
 form.addEventListener('submit', (e)=>{
 e.preventDefault();
 checkInputs();
-
-});
+})};
 
 /*This function checks whether user have inserted a value,
  in case user didnt type any value or typed invalid value, function lets user know that values are invalid
